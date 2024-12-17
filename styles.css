@@ -1,0 +1,120 @@
+/* Base Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    text-align: center;
+  }
+  
+  /* Container for main content */
+  .container {
+    width: 90%; /* Make it flexible */
+    max-width: 600px; /* Limit maximum width for larger screens */
+    margin: 0 auto;
+    color: #ffffff;
+  }
+  
+  /* Titles and text styles */
+  .title {
+    font-size: 2rem; /* Adjusted for responsiveness */
+    margin-bottom: 20px;
+  }
+  
+  .subtitle {
+    font-size: 1rem; /* Adjusted for smaller screens */
+    margin-bottom: 20px;
+  }
+  
+  /* Buttons */
+  button {
+    background-color: #ff6f61;
+    color: white;
+    font-size: 1rem; /* Adjusted for responsiveness */
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.3s;
+  }
+  
+  button:hover {
+    transform: scale(1.1);
+    background-color: #e35d56;
+  }
+  
+  /* Hidden section initially */
+  #surprise {
+    margin-top: 20px;
+  }
+  
+  .hidden {
+    display: none; /* Hidden by default */
+  }
+  
+  /* Sparkles container */
+  #sparkles {
+    position: relative;
+    width: 100%;
+    height: 100px;
+    margin-top: 20px;
+    overflow: hidden;
+  }
+  
+  .sparkle {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    border-radius: 50%;
+    animation: sparkle 1.5s linear infinite;
+  }
+  
+  /* Sparkle animation */
+  @keyframes sparkle {
+    0% {
+      transform: translateY(0) scale(1);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(100px) scale(0.5);
+      opacity: 0;
+    }
+  }
+  
+  /* Responsive Design: Small Screens */
+  @media (max-width: 768px) {
+    .title {
+      font-size: 1.8rem;
+    }
+  
+    .subtitle {
+      font-size: 0.9rem;
+    }
+  
+    button {
+      font-size: 0.9rem;
+      padding: 8px 16px;
+    }
+  }
+  
+  /* Responsive Design: Very Small Screens */
+  @media (max-width: 480px) {
+    .title {
+      font-size: 1.5rem;
+    }
+  
+    .subtitle {
+      font-size: 0.8rem;
+    }
+  
+    button {
+      font-size: 0.8rem;
+      padding: 6px 12px;
+    }
+  }
+  
